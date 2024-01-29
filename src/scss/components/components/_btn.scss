@@ -1,0 +1,27 @@
+.slider {
+	&__left-arrow-btn,
+	&__right-arrow-btn {
+		background-color: $bg-color;
+		border: 0;
+		border-radius: 50px;
+		height: 5vw;
+		position: absolute;
+		top: 2.5vw;
+		width: 5vw;
+
+		&__left,
+		&__right {
+			color: $arrow-color;
+			cursor: pointer;
+			font-size: $arrow-size;
+		}
+	}
+
+	&__left-arrow-btn {
+		left: 1vw;
+	}
+
+	&__right-arrow-btn {
+		right: 1vw;
+	}
+}

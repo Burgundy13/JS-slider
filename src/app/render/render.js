@@ -24,18 +24,28 @@ export function render() {
 	);
 	this.sliderElement.appendChild(this.rightArrowBtn);
 	this.rightArrowBtn.appendChild(this.rightArrow);
+	this.leftArrowBtn.style.display = 'none';
 }
 
 export function renderSlides(data) {
+	this.sliderContainer.style.width = `${
+		this.data.length * (this.sliderElement.offsetWidth / this.previewType)
+	}px`;
 	data.forEach((slide) => {
 		const slideContainer = document.createElement('div');
 		slideContainer.className = 'slider__slider-container__slide';
+		slideContainer.style.width = `${
+			this.sliderElement.offsetWidth / this.previewType
+		}px`;
 		const slideLink = document.createElement('a');
 		slideLink.className = 'slider__link';
 		slideLink.href = slide.redirectLink;
 		slideLink.target = '_blank';
 		slideContainer.appendChild(slideLink);
 		const slideImg = document.createElement('img');
+		slideImg.style.height = `${
+			(9 * (this.sliderElement.offsetWidth / this.previewType)) / 16
+		}px`;
 		slideImg.className = 'slider__link__img';
 		slideImg.src = slide.imgUrl;
 		const slideTitle = document.createElement('h2');

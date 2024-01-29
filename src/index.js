@@ -6,6 +6,7 @@ class Slider {
 		this.el = el;
 		this.data = data;
 		this.initialize = core;
+		this.previewType = 6;
 	}
 }
 

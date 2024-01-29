@@ -13,8 +13,7 @@
 		"WebKitCSSMatrix": true
 	},
 	"rules": {
-		"indent": ["error", 2],
-
+		"indent": ["error", "tab"],
 		"quotes": ["error", "single"],
 		"semi": ["error", "always"]
 	}

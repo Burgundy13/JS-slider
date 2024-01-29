@@ -1,0 +1,25 @@
+.slider {
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+
+	&__slider-container {
+		display: flex;
+		font-family: 'Pacifico', cursive;
+		text-align: center;
+
+		&__slide {
+			padding: 0 5px;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+
+		h2 {
+			border: 1px solid $arrow-color;
+			border-radius: 50px;
+			color: $arrow-color;
+		}
+	}
+}
