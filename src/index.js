@@ -1,5 +1,6 @@
 import './scss/style.scss';
 import core from './app/core/core';
+import lazy from './app/lazy/lazy';
 import checkScreenResolution from './app/helper/checkScreenResolution';
 
 class Slider {
@@ -12,6 +13,9 @@ class Slider {
 		this.previewType = 6;
 		this.countInfinity = 0;
 		this.infinity = options.infinity;
+		this.lazyLoad = options.lazyLoad;
+		this.lazy = lazy;
+		this.lazy();
 		// console.log(this);
 	}
 }

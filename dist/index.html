@@ -26,7 +26,10 @@
 				fetch('/data/data.json')
 					.then((response) => response.json())
 					.then((data) => {
-						const slider = new Slider('slider', data, { infinity: true });
+						const slider = new Slider('slider', data, {
+							infinity: true,
+							lazyLoad: true,
+						});
 						slider.initialize();
 					});
 			});

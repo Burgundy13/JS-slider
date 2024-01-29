@@ -47,7 +47,14 @@ export function renderSlides(data) {
 			(9 * (this.sliderElement.offsetWidth / this.previewType)) / 16
 		}px`;
 		slideImg.className = 'slider__link__img';
-		slideImg.src = slide.imgUrl;
+		if (this.lazyLoad === true) {
+			slideImg.setAttribute('data-src', slide.imgUrl);
+		} else {
+			slideImg.src = slide.imgUrl;
+		}
+		if (this.lazyLoad === true) {
+			this.imageObserver.observe(slideImg);
+		}
 		const slideTitle = document.createElement('h2');
 		slideTitle.innerText = slide.caption;
 		slideLink.appendChild(slideImg);
