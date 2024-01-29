@@ -25,3 +25,28 @@
 		right: 1vw;
 	}
 }
+
+@include breakpoint(md) {
+	.slider {
+		&__left-arrow-btn,
+		&__right-arrow-btn {
+			top: 5vw;
+		}
+	}
+}
+
+@include breakpoint(sm) {
+	.slider {
+		&__left-arrow-btn,
+		&__right-arrow-btn {
+			height: 10vw;
+			top: 20vw;
+			width: 10vw;
+
+			&__left,
+			&__right {
+				font-size: 8vw;
+			}
+		}
+	}
+}

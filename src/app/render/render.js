@@ -55,3 +55,17 @@ export function renderSlides(data) {
 		this.sliderContainer.appendChild(slideContainer);
 	});
 }
+
+export function calculateSize() {
+	this.sliderContainer.style.width = `${
+		this.data.length * (this.sliderElement.offsetWidth / this.previewType)
+	}px`;
+	document
+		.querySelectorAll('.slider__slider-container__slide')
+		.forEach((el) => {
+			el.style.width = `${this.sliderElement.offsetWidth / this.previewType}px`;
+			el.childNodes[0].childNodes[0].style.height = `${
+				(9 * (this.sliderElement.offsetWidth / this.previewType)) / 16
+			}px`;
+		});
+}

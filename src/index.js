@@ -1,16 +1,15 @@
 import './scss/style.scss';
 import core from './app/core/core';
-import { moveLeft, moveRight } from '../src/app/events/events';
+import checkScreenResolution from './app/helper/checkScreenResolution';
 
 class Slider {
 	constructor(el, data, options) {
 		this.el = el;
 		this.data = data;
+		this.checkScreenResolution = checkScreenResolution;
 		this.initialize = core;
 		this.previewType = 6;
 		this.countInfinity = 0;
-		this.moveLeft = moveLeft;
-		this.moveRight = moveRight;
 	}
 }
 
