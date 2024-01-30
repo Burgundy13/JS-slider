@@ -1,6 +1,9 @@
 export function moveRight() {
 	this.countInfinity++;
-	this.leftArrowBtn.style.display = 'block';
+	if (!this.auto) {
+		this.leftArrowBtn.style.display = 'block';
+	}
+
 	const matrix = new WebKitCSSMatrix(this.sliderContainer.style.transform);
 	this.sliderContainer.style.transform = `translateX(${
 		matrix.m41 - this.sliderElement.offsetWidth

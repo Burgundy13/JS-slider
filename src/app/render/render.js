@@ -76,3 +76,12 @@ export function calculateSize() {
 			}px`;
 		});
 }
+
+export function autoLoad() {
+	if (this.auto) {
+		this.rightArrowBtn.style.display = 'none';
+		setInterval(() => {
+			this.moveRight();
+		}, 2000);
+	}
+}

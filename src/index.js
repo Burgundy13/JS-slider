@@ -14,6 +14,7 @@ class Slider {
 		this.countInfinity = 0;
 		this.infinity = options.infinity;
 		this.lazyLoad = options.lazyLoad;
+		this.auto = options.auto;
 		this.lazy = lazy;
 		this.lazy();
 		// console.log(this);

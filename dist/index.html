@@ -27,8 +27,9 @@
 					.then((response) => response.json())
 					.then((data) => {
 						const slider = new Slider('slider', data, {
-							infinity: true,
+							infinity: false,
 							lazyLoad: true,
+							auto: false,
 						});
 						slider.initialize();
 					});
